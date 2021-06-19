@@ -1,0 +1,64 @@
+{ "questions": [
+  { 
+    "question":"What’s the diameter of a basketball hoop in inches?" ,
+    "options": ["14 inches", "16 inches", "18 inches"],
+    "answer": 2,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "How big is an Olympic sized swimming pool in meters?",
+    "options": ["50m x 30m", "50m x 25m", "60m x 30m"],
+    "answer": 1,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "In professional basketball, how high is the basketball hoop from the ground?",
+    "options": ["10ft", "11ft", "12ft"],
+    "answer": 0,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "The Summer Olympics are held every how many years?",
+    "options": ["2 years", "4 years", "6 years"],
+    "answer": 1,
+    "catagory": "sports",
+    "value": 100
+  },
+  { 
+    "question":"What sport is dubbed the ‘king of sports’?" ,
+    "options": ["Hockey", "Football", "Soccer"],
+    "answer": 2,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "In American Football, a touchdown is worth how many points?",
+    "options": ["3 points", "6 points", "9 points"],
+    "answer": 1,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "What is Canada’s national sport? ",
+    "options": ["Hockey", "Lacrosse", "Cross country skiing"],
+    "answer": 1,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "How many players are on a baseball team?",
+    "options": ["9 players", "15 players", "20 players"],
+    "answer": 0,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "What team gets the advantage of first bat in baseball?",
+    "options": ["Home team", "Visiting Team"],
+    "answer": 1,
+    "catagory": "sports",
+    "value": 100
+  },
+  { "question": "How many dimples does an average golf ball have?",
+    "options": ["128", "260", "336"],
+    "answer": 2,
+    "catagory": "sports",
+    "value": 100
+  }
+]}

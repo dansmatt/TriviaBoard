@@ -1,0 +1,64 @@
+{ "questions": [
+  { 
+    "question":"Who was the very first American Idol winner?" ,
+    "options": ["Kelly Clarkson", "Ryan Starr", "Hilary Duff"],
+    "answer": 0,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Before Miley Cyrus recorded “Wrecking Ball,” it was offered to which singer?",
+    "options": ["Alicia Keys", "Beyoncé", "Leona Lewis"],
+    "answer": 1,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "What rock icon was the founder of The Society for the Prevention of Cruelty to Long-haired Men?",
+    "options": ["David Bowie", "Peter Frampton", "Mick Jagger"],
+    "answer": 0,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Eminem‘s 8 Mile is named after a road in which city?",
+    "options": ["Chicago", "San Fran", "Detroit"],
+    "answer": 2,
+    "catagory": "music",
+    "value": 100
+  },
+  { 
+    "question":"Who was the first woman ever inducted into the Rock and Roll Hall of Fame?" ,
+    "options": ["Janis Joplin", "Aretha Franklin", "Pat Benatar"],
+    "answer": 1,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Paul McCartney and John Lennon wrote which Rolling Stones song?",
+    "options": ["I Wanna Be Your Man", "Let’s spend the night together", "Ruby Tuesday"],
+    "answer": 0,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Which classical composer was deaf?",
+    "options": ["Wolfgang Amadeux Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach"],
+    "answer": 1,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Prince introduced his iconic symbol on the cover of which single?",
+    "options": ["Purple Rain", "Little Red Corvette", "1999"],
+    "answer": 2,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "What does Lady Gaga affectionately call her fans?",
+    "options": ["Superheroes", "Little Monsters", "Gaga fans"],
+    "answer": 1,
+    "catagory": "music",
+    "value": 100
+  },
+  { "question": "Who sang the Spongebob Squarepants theme song for the movie?",
+    "options": ["Avril Lavigne", "Hilary Duff", "Miley Cyrus"],
+    "answer": 2,
+    "catagory": "music",
+    "value": 100
+  }
+]}

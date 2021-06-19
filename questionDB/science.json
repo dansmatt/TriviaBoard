@@ -1,0 +1,64 @@
+{ "questions": [
+  { 
+    "question":"This essential gas is important so that we can breathe" ,
+    "options": ["Oxygen", "Nitrogen", "Helium"],
+    "answer": 0,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "What is the nearest planet to the sun?",
+    "options": ["Mars", "Pluto", "Mercury"],
+    "answer": 2,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "What is the largest planet in the solar system?",
+    "options": ["Earth", "Saturn", "Jupiter"],
+    "answer": 2,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "What is the rarest blood type?",
+    "options": ["O positive", "AB negative", "B negative"],
+    "answer": 1,
+    "catagory": "science",
+    "value": 100
+  },
+  { 
+    "question":"On what part of your body would you find the pinna?",
+    "options": ["Ear", "Eye", "Nose"],
+    "answer": 0,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "What tissue connects muscles to bones?",
+    "options": ["Tendons", "Fibres", "Ligaments"],
+    "answer": 0,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "Sounds travels faster in air than in water:",
+    "options": ["True", "False"],
+    "answer": 0,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "How long dos a human red blood cell survive?",
+    "options": ["10 days", "120 days", "2 years"],
+    "answer": 1,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "Can you hear anything in outer space?",
+    "options": ["Yes", "No"],
+    "answer": 1,
+    "catagory": "science",
+    "value": 100
+  },
+  { "question": "An egg’s shell is what percentage of its total weight?",
+    "options": ["2%", "8%", "12%"],
+    "answer": 2,
+    "catagory": "science",
+    "value": 100
+  }
+]}

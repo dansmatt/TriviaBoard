@@ -1,0 +1,64 @@
+{ "questions": [
+  { 
+    "question":"What part of the plant conducts photosynthesis?" ,
+    "options": ["Stem", "Flower", "Leaf"],
+    "answer": 2,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "What is the largest known land animal?",
+    "options": ["Hippopotamus", "Elephant", "Giraffe"],
+    "answer": 1,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "How many bones to sharks have in total?",
+    "options": ["0 bones", "3 bones", "12 bones"],
+    "answer": 0,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "Dolly was the first ever living creature to be cloned. What type of animal was she?",
+    "options": ["Sheep", "Mouse", "Worm"],
+    "answer": 0,
+    "catagory": "nature",
+    "value": 100
+  },
+  { 
+    "question":"What is the tallest type of grass?" ,
+    "options": ["Northwind switch grass", "Pampas grass", "Bamboo"],
+    "answer": 2,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "What type of tree do acorns come from?",
+    "options": ["Oak", "Red maple", "Sugar maple"],
+    "answer": 0,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "What the hardest known material in nature?",
+    "options": ["Topaz", "Corundum", "Diamonds"],
+    "answer": 2,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "How old, is the oldest living tree?",
+    "options": ["4800 years", "8100 years", "1300 years"],
+    "answer": 0,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "Where is the oldest living tree located?",
+    "options": ["California, USA", "British Columbia, CA", "Canterbury, NZ"],
+    "answer": 0,
+    "catagory": "nature",
+    "value": 100
+  },
+  { "question": "How many hearts does an octopus have?",
+    "options": ["1", "2", "3"],
+    "answer": 2,
+    "catagory": "nature",
+    "value": 100
+  }
+]}
