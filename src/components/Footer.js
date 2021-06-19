@@ -6,8 +6,8 @@ const Footer = (props) => {
     return (
         <footer className="container">
             <div className="row mx-auto">
-                <Score score={props.score}/>
-                <Timer />
+                <Score />
+                <Timer time={60000}/>
             </div>
         </footer>
     );

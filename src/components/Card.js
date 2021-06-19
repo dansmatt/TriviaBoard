@@ -10,10 +10,9 @@ const Card = (props) => {
 
   const selectCard = () => {
     setSelected(true);
-    game.setCurrQuestion(props.q);
     setAttempted(true);
 
-    /* start timer */
+    game.setCurrQuestion(props.q);
     game.setTimerState("start");
   }
 

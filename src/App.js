@@ -6,17 +6,12 @@ import {GameProvider} from './components/GameContext'
 import React, { useState } from 'react';
 
 const App = () => {
-  const [score, setScore] = useState(0); 
-  const updateScore = (n) => {setScore(score + n)}
-
-  
-
   return (
     <GameProvider>
       <div className="game">
-        <Header />
-        <Board updateScore={updateScore}/>
-        <Footer score={score}/>
+        <Header title="Lets play Trivia!" />
+        <Board catagories={["sports", "science", "music", "nature"]}/>
+        <Footer />
       </div>
     </GameProvider>
   );

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Countdown from "react-countdown";
 import { GameContext } from "./GameContext";
 
-const Timer = () => {
+const Timer = ({time}) => {
   const game  = useContext(GameContext);
 
   const renderer =  ({hours, minutes, seconds, completed}) => {
@@ -22,7 +22,7 @@ const Timer = () => {
   return (
     <div className="timer" align="right">
       <Countdown 
-        date={Date.now() + 60000}
+        date={Date.now() + time}
         renderer={renderer}/>
     </div>);
 }

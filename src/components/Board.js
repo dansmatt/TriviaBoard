@@ -5,11 +5,9 @@ import {GameContext} from './GameContext'
 const Board = (props) => {
     const defaultQ = {question: "", options: [], answer: 0, catagory: "", value: 0}
     
-    
     const [showCorrect, setShowCorrect] = useState(false);
     const [showInCorrect, setShowInCorrect] = useState(false);
-
-    const [selected, setSelected] = useState("");
+    const [selectedOption, setSelectedOption] = useState("");
 
     const game  = useContext(GameContext);
 
@@ -24,20 +22,20 @@ const Board = (props) => {
           setShowCorrect(true);
         } else {
           game.updateScore(-game.currQuestion.value);
-          setSelected(game.currQuestion.options[answer])
+          setSelectedOption(game.currQuestion.options[answer])
           setShowInCorrect(true);
         }
       }
     
     const returnToBoard = () => {
-        setSelected("");
+        setSelectedOption("");
         setShowCorrect(false);
         setShowInCorrect(false);
         game.setCurrQuestion(defaultQ);
     }
 
     const cols = props.catagories.map((c) =>
-            <Catagory key={c} title={c} updateScore={props.updateScore} setQuestion={setQuestion}/>
+        <Catagory key={c} title={c} setQuestion={setQuestion}/>
     );
 
     const opts = game.currQuestion.options.map((opt, i) =>
@@ -58,7 +56,7 @@ const Board = (props) => {
                   </div>
                 </div>
                 <div className="answer" hidden={!showInCorrect}>
-                    <h2 > {selected} is <span style={{color:"darkred"}}>incorrect</span></h2>
+                    <h2 > {selectedOption} is <span style={{color:"darkred"}}>incorrect</span></h2>
                     <h2>The correct answer was {game.currQuestion.options[game.currQuestion.answer]}</h2>
                     <div className="back">
                       <button className="btn btn-light" onClick={()=>returnToBoard()}>continue</button>
@@ -70,11 +68,6 @@ const Board = (props) => {
                 </div>
             </div>
         );
-}
-
-Board.defaultProps = {
-    catagories: ["sports", "science", "music", "nature"],
-    numQuestions: 4
 }
 
 export default Board

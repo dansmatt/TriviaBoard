@@ -1,10 +1,8 @@
 
-const Header = () => {
-    
-    
+const Header = ({title}) => {
     return (
         <header>
-            <h1 className="header">Lets play Trivia!</h1>
+            <h1 className="header">{title}</h1>
         </header>
     );
 }

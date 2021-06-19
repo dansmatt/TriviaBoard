@@ -6,6 +6,7 @@ const Catagory = (props) => {
     const [questionLst, setQuestions] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
 
+    /* get questions for this catagory*/
     useEffect(() => {
         fetch('questionDB/'+ props.title + '.json',
         {headers : {
@@ -19,13 +20,11 @@ const Catagory = (props) => {
             },
             (error) => {
                 setLoaded(true);
-            })}, [])
+            })
+        }, [])
 
     if (isLoaded){
-        const cards = questionLst.slice(0,4).map((q) =>
-            <Card q={q}
-                setQuestion={props.setQuestion}/>
-        );
+        const cards = questionLst.slice(0,4).map((q) => <Card q={q}/>);
 
         return (<div className="card-column mx-auto catagory">
                     <div className={props.title + " titleCard card"}><span>{props.title}</span></div>  
@@ -36,7 +35,7 @@ const Catagory = (props) => {
         return (<div className="card-column mx-auto catagory">
                     <div className={props.title + " titleCard card"}><h2>{props.title}</h2></div>  
                     <p>loading the  questions...</p>
-            </div>);
+                </div>);
     }
 }
     

@@ -18,6 +18,7 @@ header {
 
 .header {
   color: black;
+  font-size: 6vh;
   font-weight: bolder;
   text-transform: capitalize;
   text-shadow:  2px 2px gray;
