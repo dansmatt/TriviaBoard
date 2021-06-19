@@ -22,9 +22,24 @@ const Catagory = (props) => {
                 setLoaded(true);
             })
         }, [])
-
+    
+    
+    const getRandomQuestions = (lst, n) => {
+        var result = [];
+        var indexs = []
+        while (result.length < n) {
+            var x = Math.floor(Math.random() * lst.length);
+            if (!indexs.includes(x)){
+                result.push(lst[x]);
+                indexs.push(x);
+            }
+        }
+        return result;
+    }
+    
     if (isLoaded){
-        const cards = questionLst.slice(0, props.numQuestions).map((q) => <Card q={q}/>);
+        var questions = getRandomQuestions(questionLst, props.numQuestions);
+        var cards = questions.map((q) => <Card q={q}/>);
 
         return (<div className="card-column mx-auto catagory">
                     <div className={props.title + " titleCard card"}><span>{props.title}</span></div>  

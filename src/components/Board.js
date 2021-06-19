@@ -26,6 +26,7 @@ const Board = (props) => {
       }
     
     const passQuestion = () => {
+      game.setTimerState("ready");
       setSelectedOption("");
       setShowCorrect(false);
       setShowInCorrect(false);
