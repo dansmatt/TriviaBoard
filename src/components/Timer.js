@@ -1,15 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Countdown from "react-countdown";
 import { GameContext } from "./GameContext";
 
 const Timer = ({time}) => {
   const game  = useContext(GameContext);
 
+  const [key, setKey] = useState(Date.now());
+
   const renderer =  ({hours, minutes, seconds, completed}) => {
     if (completed){
       game.setTimerState("ready");
       game.updateScore(-game.currQuestion.value);
       game.setCurrQuestion({question: "", options: [], answer: 0, catagory: "", value: 0})
+      setKey(Date.now());
       return <span></span>;
     } else if (game.timer === "start") {
       return <span className="time">Time left: {seconds}s</span>;
@@ -22,6 +25,7 @@ const Timer = ({time}) => {
   return (
     <div className="timer" align="right">
       <Countdown 
+        key={key}
         date={Date.now() + time}
         renderer={renderer}/>
     </div>);
