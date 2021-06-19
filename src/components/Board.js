@@ -78,9 +78,14 @@ const Board = (props) => {
         </div>);
         } else{
           if (game.allRight){
-            return (<div className="board"><h1 className="result">You won!</h1></div>);
+            return (<div className="board">
+                <h1 className="result">You won!</h1>
+                <button className="btn btn-primary" onClick={()=>(window.location.reload())}>Restart</button>
+              </div>);
           } else {
-            return (<div className="board"><h1 className="result">You can do better next time!</h1></div>);
+            return (<div className="board"><h1 className="result">You can do better next time!</h1>
+                <button className="btn btn-primary" onClick={()=>(window.location.reload())}>Restart</button>
+              </div>);
           }
           
         }
