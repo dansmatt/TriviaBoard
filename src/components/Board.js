@@ -27,6 +27,14 @@ const Board = (props) => {
         }
       }
     
+    const passQuestion = () => {
+      setSelectedOption("");
+      setShowCorrect(false);
+      setShowInCorrect(false);
+      game.setCurrQuestion(defaultQ);
+      game.setHasSkip(false);
+    }
+
     const returnToBoard = () => {
         setSelectedOption("");
         setShowCorrect(false);
@@ -46,21 +54,22 @@ const Board = (props) => {
         <div className="board">
             <div className={"question mx-auto " + game.currQuestion.catagory} hidden={game.currQuestion.question == ""}>
                 <h1>{game.currQuestion.question}</h1>
-                <ol hidden={showCorrect || showInCorrect} type="a" className="options">
-                  {opts}
-                </ol>
+                <div hidden={showCorrect || showInCorrect}>
+                  <div>
+                    <ol type="a" className="options">
+                      {opts}
+                    </ol>
+                  </div>
+                  <button className="btn btn-primary" hidden={!game.hasSkip} onClick={()=>passQuestion()}>PASS</button>
+                </div>
                 <div className="answer" hidden={!showCorrect}>
                   <h2>{game.currQuestion.options[game.currQuestion.answer]} is <span style={{color:"darkgreen"}}>correct</span>!</h2>
-                  <div className="back">
-                    <button className="btn btn-light back" onClick={()=>returnToBoard()}>continue</button>
-                  </div>
+                  <button className="btn btn-primary" onClick={()=>returnToBoard()}>continue</button>
                 </div>
                 <div className="answer" hidden={!showInCorrect}>
                     <h2 > {selectedOption} is <span style={{color:"darkred"}}>incorrect</span></h2>
                     <h2>The correct answer was {game.currQuestion.options[game.currQuestion.answer]}</h2>
-                    <div className="back">
-                      <button className="btn btn-light" onClick={()=>returnToBoard()}>continue</button>
-                    </div>
+                    <button className="btn btn-primary" onClick={()=>returnToBoard()}>continue</button>
                 </div>
             </div>
                 <div className="card-deck mx-auto" hidden={!game.currQuestion.question == ""}>
