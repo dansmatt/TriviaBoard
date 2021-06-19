@@ -3,17 +3,14 @@ import React, { useState, useContext } from 'react';
 import {GameContext} from './GameContext'
 
 const Board = (props) => {
-    const defaultQ = {question: "", options: [], answer: 0, catagory: "", value: 0}
+    const totalQuestions = props.numQuestions * props.catagories.length;
+    const defaultQ = {question: "", options: [], answer: 0, catagory: "", value: 0};
     
     const [showCorrect, setShowCorrect] = useState(false);
     const [showInCorrect, setShowInCorrect] = useState(false);
     const [selectedOption, setSelectedOption] = useState("");
 
     const game  = useContext(GameContext);
-
-    const setQuestion = (q) => {
-      game.setCurrQuestion(q);
-    }
 
     const updateScore = (answer) => {
       game.setTimerState("ready");
@@ -22,6 +19,7 @@ const Board = (props) => {
           setShowCorrect(true);
         } else {
           game.updateScore(-game.currQuestion.value);
+          game.setAllRight(false);
           setSelectedOption(game.currQuestion.options[answer])
           setShowInCorrect(true);
         }
@@ -33,6 +31,7 @@ const Board = (props) => {
       setShowInCorrect(false);
       game.setCurrQuestion(defaultQ);
       game.setHasSkip(false);
+      game.updateNumAnswered(1);
     }
 
     const returnToBoard = () => {
@@ -40,17 +39,18 @@ const Board = (props) => {
         setShowCorrect(false);
         setShowInCorrect(false);
         game.setCurrQuestion(defaultQ);
+        game.updateNumAnswered(1);
     }
 
     const cols = props.catagories.map((c) =>
-        <Catagory key={c} title={c} setQuestion={setQuestion}/>
+        <Catagory key={c} title={c} numQuestions={props.numQuestions}/>
     );
 
     const opts = game.currQuestion.options.map((opt, i) =>
         <li className="option" onClick={()=>updateScore(i)}><h2>{opt}</h2> </li>
     );
-
-    return (
+    if (game.numAnswered !== totalQuestions){
+      return (
         <div className="board">
             <div className={"question mx-auto " + game.currQuestion.catagory} hidden={game.currQuestion.question == ""}>
                 <h1>{game.currQuestion.question}</h1>
@@ -72,11 +72,18 @@ const Board = (props) => {
                     <button className="btn btn-primary" onClick={()=>returnToBoard()}>continue</button>
                 </div>
             </div>
-                <div className="card-deck mx-auto" hidden={!game.currQuestion.question == ""}>
-                    {cols}
-                </div>
+            <div className="card-deck mx-auto" hidden={!game.currQuestion.question == ""}>
+                {cols}
             </div>
-        );
+        </div>);
+        } else{
+          if (game.allRight){
+            return (<div className="board"><h1 className="result">You won!</h1></div>);
+          } else {
+            return (<div className="board"><h1 className="result">You can do better next time!</h1></div>);
+          }
+          
+        }
 }
 
 export default Board

@@ -24,7 +24,7 @@ const Catagory = (props) => {
         }, [])
 
     if (isLoaded){
-        const cards = questionLst.slice(0,4).map((q) => <Card q={q}/>);
+        const cards = questionLst.slice(0, props.numQuestions).map((q) => <Card q={q}/>);
 
         return (<div className="card-column mx-auto catagory">
                     <div className={props.title + " titleCard card"}><span>{props.title}</span></div>  

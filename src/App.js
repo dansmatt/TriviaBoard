@@ -10,7 +10,7 @@ const App = () => {
     <GameProvider>
       <div className="game">
         <Header title="Lets play Trivia!" />
-        <Board catagories={["sports", "science", "music", "nature"]}/>
+        <Board catagories={["sports", "science", "music", "nature"]} numQuestions={4}/>
         <Footer />
       </div>
     </GameProvider>
