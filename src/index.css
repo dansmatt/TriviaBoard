@@ -1,3 +1,5 @@
+html, body, #root, .game {height: 100%; width: 100%;}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +9,154 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  height: 10%;
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+.header {
+  color: black;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-shadow:  2px 2px gray;
+  display: inline-block;
+}
+
+/* catagory colors */
+.card.sports {
+  background-color: orange;
+}
+.card.nature {
+  background-color: green;
+}
+.card.music {
+  background-color: rgb(233, 81, 132);
+}
+.card.science {
+  background-color: teal;
+}
+
+.sports {
+  background-color: orange;
+}
+.nature {
+  background-color: green;
+}
+.music {
+  background-color: rgb(233, 81, 132);
+}
+.science {
+  background-color: teal;
+}
+
+/* Main Game board */
+.game {
+  overflow: scroll;
+}
+
+.board {
+  height: 80%;
+  width: 75%;
+  align-self: center;
+  align-content: center;
+  overflow: scroll;
+  margin: auto;
+}
+
+.card {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.titleCard {
+  color: whitesmoke;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3vh;
+  font-weight: bolder;
+  overflow: hidden;
+}
+
+.scoreCard {
+  color: whitesmoke;
+  text-align: center;
+  height: 15vh;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.value {
+  font-weight: bolder;
+  font-size: 6vh;
+  justify-content: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.question {
+  color: whitesmoke;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  z-index: 1;
+  align-self: center;
+  border-radius: 20px;
+  padding: 30px;
+  overflow: scroll;
+}
+
+.options {
+  display: inline-block;
+}
+
+.option {
+  font-size: 40px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.option:hover {
+  border: whitesmoke;
+  font-weight: bolder;
+  border-style: solid;
+  border-width: medium;
+}
+
+.attempted {
+  cursor: crosshair;
+  color: rgb(87, 87, 87);
+  opacity: 0.5;
+}
+
+.answer {
+  padding-top: 20px;
+  color: black;
+  font-weight: bolder;
+}
+
+/* Footer */
+.score {
+  font-weight: bolder;
+  font-size: 25px;
+  width: 50%;
+  margin: 0;
+  position: absolute;
+  left:30px;
+}
+
+.timer {
+  position: absolute;
+  right:30px;
+  width: 50%
+}
+
+.time {
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
 }
