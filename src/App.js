@@ -3,8 +3,6 @@ import Board from './components/Board'
 import Footer from './components/Footer'
 import {GameProvider} from './components/GameContext'
 
-import React, { useState } from 'react';
-
 const App = () => {
   return (
     <GameProvider>
